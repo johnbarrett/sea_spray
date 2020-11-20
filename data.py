@@ -21,3 +21,6 @@ schema_df = pd.read_csv('data/ssaSlice.csv')
 print(schema_df)
 
 print(content.columns)
+
+subset = content.loc[:, ["lat", "lon"]]
+print(subset)
