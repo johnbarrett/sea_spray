@@ -24,3 +24,4 @@ print(content.columns)
 
 subset = content.loc[:, ["lat", "lon"]]
 print(subset)
+
