@@ -22,5 +22,5 @@ print(schema_df)
 
 print(content.columns)
 
-#subset = content.loc[:, ["lat", "lon"]]
-# print(subset)
+subset = content.loc[:, ["lat", "lon"]]
+print(subset)
