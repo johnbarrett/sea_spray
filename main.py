@@ -1,3 +1,4 @@
+# load the necessary libraries
 import pandas as pd
 
 # load & read csv file
@@ -8,12 +9,10 @@ content['date'] = pd.to_datetime(content['date'])
 content['timedate'] = pd.to_datetime(content['timedate'])
 content['end_time'] = pd.to_datetime(content['end_time'])
 
-# print(content.shape)
+# print information about the columns
+print(content.info())
+print(content)
 
-# print(content.info())
-
-schema_df = pd.read_csv('data/ssaSlice.csv')
-print(schema_df)
 
 print(content.columns)
 
