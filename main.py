@@ -10,11 +10,11 @@ content['timedate'] = pd.to_datetime(content['timedate'])
 content['end_time'] = pd.to_datetime(content['end_time'])
 
 # print information about the columns
-print(content.info())
+# print(content.info())
+
+# print Data Frame
 print(content)
 
-
-print(content.columns)
-
+# print only 2 columns
 subset = content.loc[:, ["lat", "lon"]]
 print(subset)
