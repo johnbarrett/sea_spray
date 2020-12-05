@@ -1,5 +1,6 @@
 # load the necessary libraries
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # load & read csv file
 content = pd.read_csv('data/ssaSlice.csv', header=0)
@@ -9,12 +10,17 @@ content['date'] = pd.to_datetime(content['date'])
 content['timedate'] = pd.to_datetime(content['timedate'])
 content['end_time'] = pd.to_datetime(content['end_time'])
 
-# print information about the columns
-# print(content.info())
-
 # print Data Frame
 print(content)
 
 # print only 2 columns
-subset = content.loc[:, ["lat", "lon"]]
+subset = content.loc[:, ["date", "altitude"]]
 print(subset)
+
+
+# Make plot of the data
+
+subset.plot(x='date', y='altitude', kind='line')
+
+
+# plt.show()
