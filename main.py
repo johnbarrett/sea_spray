@@ -17,9 +17,7 @@ print(content)
 subset = content.loc[:, ["date", "altitude"]]
 print(subset)
 
-
 # Make plot of the data
-
 subset.plot(x='date', y='altitude', kind='line')
 plt.title("Kite's Flight")
 plt.ylabel('Altitude')
