@@ -14,12 +14,12 @@ content['end_time'] = pd.to_datetime(content['end_time'])
 print(content)
 
 # print only 2 columns
-subset = content.loc[:, ["date", "altitude"]]
+subset = content.loc[:, ["lon", "lat"]]
 print(subset)
 
 # Make plot of the data
-subset.plot(x='date', y='altitude', kind='line')
+subset.plot(x='lon', y='lat', kind='scatter')
 plt.title("Kite's Flight")
-plt.ylabel('Altitude')
+plt.ylabel('lat')
 
 plt.show()
